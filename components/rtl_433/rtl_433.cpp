@@ -8,6 +8,7 @@ namespace rtl_433 {
 static const char *const RTAG = "RTL_433";
 
 void RTL433Decoder::setup() {
+  rd.setook(false);
   rd.setCallback(&RTL433Decoder::process);
   rd.rtlSetup();
   ESP_LOGD(RTAG, "rtl_433 setup done");
